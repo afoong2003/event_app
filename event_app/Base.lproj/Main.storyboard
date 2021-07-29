@@ -1,24 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="event_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bST-np-DYn">
+                                <rect key="frame" x="20" y="64" width="374" height="353"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="353" id="Lvq-Yc-f1M"/>
+                                    <constraint firstAttribute="width" constant="374" id="PV9-gg-nc3"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAN-SN-6rS">
+                                <rect key="frame" x="20" y="486" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="WeV-Cb-v56"/>
+                                    <constraint firstAttribute="width" constant="42" id="hk1-ta-Mkp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQB-lj-GDL">
+                                <rect key="frame" x="30" y="433" width="354" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="iC4-yf-jQw"/>
+                                    <constraint firstAttribute="width" constant="354" id="zd9-Pn-6nq"/>
+                                </constraints>
+                                <state key="normal" title="Take Your Picture"/>
+                                <connections>
+                                    <action selector="didTapButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="imV-WH-h9K"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IQB-lj-GDL" firstAttribute="top" secondItem="bST-np-DYn" secondAttribute="bottom" constant="16" id="7Dj-yv-ubq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bST-np-DYn" secondAttribute="trailing" constant="20" id="9Wo-el-CS4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IQB-lj-GDL" secondAttribute="trailing" constant="20" id="AbY-K0-yVR"/>
+                            <constraint firstItem="iAN-SN-6rS" firstAttribute="top" secondItem="IQB-lj-GDL" secondAttribute="bottom" constant="23" id="Ioc-vh-P9s"/>
+                            <constraint firstItem="iAN-SN-6rS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Jaw-cd-IrY"/>
+                            <constraint firstItem="iAN-SN-6rS" firstAttribute="top" secondItem="IQB-lj-GDL" secondAttribute="bottom" constant="23" id="Vh3-qt-Yxc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iAN-SN-6rS" secondAttribute="trailing" constant="352" id="W9L-Fp-gCT"/>
+                            <constraint firstItem="bST-np-DYn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aW4-iv-sgC"/>
+                            <constraint firstItem="IQB-lj-GDL" firstAttribute="top" secondItem="bST-np-DYn" secondAttribute="bottom" constant="16" id="eUU-Bb-HQ8"/>
+                            <constraint firstItem="IQB-lj-GDL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="spy-KK-mzT"/>
+                            <constraint firstItem="bST-np-DYn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="y8w-yd-VaT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iAN-SN-6rS" secondAttribute="bottom" constant="355" id="zPN-qE-oEN"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="IQB-lj-GDL" id="Ke3-WH-Ngy"/>
+                        <outlet property="imageView" destination="bST-np-DYn" id="5AE-bA-k05"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-23" y="-9"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
